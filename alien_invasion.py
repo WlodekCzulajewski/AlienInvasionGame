@@ -9,8 +9,11 @@ class AlienInvasion:
         """Game initialization and resource creation."""
         pygame.init()
 
-        self.screen = pygame.display.set_mode((2560, 1600))
+        self.screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
         pygame.display.set_caption("Alien invasion")
+
+        #Define background color
+        self.bg_color = (230, 230, 230)
 
     def run_game(self):
         """Launch loop of main game."""
@@ -20,6 +23,9 @@ class AlienInvasion:
                 if event.type == pygame.QUIT:
                     sys.exit()
 
+            #Reload display in every loop iteration
+            self.screen.fill(bg_color)
+            
             #Show last modified display.
             pygame.display.flip()
 
