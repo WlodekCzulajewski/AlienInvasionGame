@@ -1,6 +1,11 @@
 #Mac system files
 .DS_Store
 
+#Vim files
+*~
+*.swp
+*.swo
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
