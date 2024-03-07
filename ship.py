@@ -16,6 +16,14 @@ class Ship:
 
         #Every new spaceship starts at the bottom of a screen.
         self.rect.midbottom = self.screen_rect.midbottom
+    
+        #Options of movement
+        self.moving_right = False
+
+    def update(self):
+        """Actualization of ships position based on option of movement."""
+        if self.moving_right:
+            self.rect.x += 1
 
     def blitme(self):
         """Display spaceship at his current position."""
